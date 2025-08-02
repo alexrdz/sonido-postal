@@ -8,6 +8,8 @@
   --gray-border: #e5e7eb;
   --text-main: #18181b;
   --text-muted: #6b7280;
+  --glyph-size: 5rem;
+  --glyph-size-sm: 3rem;
 }
 
 * {
@@ -60,8 +62,8 @@ header {
 }
 
 .glyph {
-  inline-size: 80px;
-  block-size: 80px;
+  inline-size: var(--glyph-size);
+  block-size: var(--glyph-size);
   margin-inline: auto;
   margin-block-end: 40px;
   opacity: 0.8;
@@ -72,7 +74,6 @@ h1,
   font-size: 4rem;
   font-weight: 300;
   letter-spacing: -2px;
-  margin-block-end: 20px;
   background: linear-gradient(
     45deg,
     var(--accent1),
@@ -88,7 +89,7 @@ h1,
   font-size: 1.5rem;
   color: var(--text-muted);
   font-weight: 300;
-  margin-block-end: 80px;
+  margin-block-end: var(--glyph-size);
   font-style: italic;
 }
 
@@ -104,9 +105,9 @@ h1,
 
 .newsletter-signup {
   background: var(--gray-bg);
-  padding-block: 80px;
+  padding-block: var(--glyph-size);
   padding-inline: 60px;
-  margin-block: 80px;
+  margin-block: var(--glyph-size);
   margin-inline: auto;
   max-inline-size: 50rem;
   text-align: center;
@@ -193,8 +194,8 @@ h1,
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 80px;
-  margin-block-start: 80px;
+  gap: var(--glyph-size);
+  margin-block-start: var(--glyph-size);
 }
 
 .feature {
@@ -202,8 +203,8 @@ h1,
 }
 
 .feature-glyph {
-  inline-size: 80px;
-  block-size: 80px;
+  inline-size: var(--glyph-size);
+  block-size: var(--glyph-size);
   margin-inline: auto;
   margin-block-end: 30px;
   opacity: 0.7;
@@ -223,23 +224,25 @@ h1,
 
 footer {
   text-align: center;
-  padding-block-start: 100px;
-  padding-block-end: 80px;
+  padding-block-start: var(--glyph-size);
+  padding-block-end: var(--glyph-size);
   color: var(--text-muted);
 }
 
 .footer-glyph {
-  inline-size: 80px;
-  block-size: 80px;
   margin-inline: auto;
-  margin-block-end: 30px;
   opacity: 0.5;
+
+  svg {
+    inline-size: var(--glyph-size-sm);
+    block-size: var(--glyph-size-sm);
+  }
 }
 
 .latest-newsletter {
-  padding-block: 80px;
+  padding-block: var(--glyph-size);
   background: var(--gray-bg);
-  margin-block: 80px;
+  margin-block: var(--glyph-size);
 }
 
 .newsletter-header {
@@ -254,8 +257,8 @@ footer {
 }
 
 .section-glyph {
-  inline-size: 80px;
-  block-size: 80px;
+  inline-size: var(--glyph-size);
+  block-size: var(--glyph-size);
   margin-inline: auto;
   opacity: 0.7;
   fill: var(--accent5);
@@ -346,7 +349,7 @@ footer {
 
 .spotlight-header {
   text-align: center;
-  margin-block-end: 80px;
+  margin-block-end: var();
 }
 
 .spotlight-glyph {
@@ -504,12 +507,12 @@ footer {
   }
 
   .spotlight-glyph {
-    inline-size: 80px;
-    block-size: 80px;
+    inline-size: var();
+    block-size: var();
   }
 
   .archives-cta {
-    padding-block: 80px;
+    padding-block: var();
   }
 
   .archives-cta h2 {
