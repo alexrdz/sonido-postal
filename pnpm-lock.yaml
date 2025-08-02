@@ -20,8 +20,9 @@ importers:
       astro:
         specifier: ^5.12.8
         version: 5.12.8(@types/node@24.1.0)(rollup@4.46.2)(typescript@5.9.2)
+    devDependencies:
       sharp:
-        specifier: ^0.34.2
+        specifier: ^0.34.3
         version: 0.34.3
 
 packages:
