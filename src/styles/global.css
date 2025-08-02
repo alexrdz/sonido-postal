@@ -10,6 +10,7 @@
   --text-muted: #6b7280;
   --glyph-size: 5rem;
   --glyph-size-sm: 3rem;
+  --gray-border: #e5e7eb;
 }
 
 * {
@@ -57,8 +58,8 @@ body {
 
 header {
   text-align: center;
-  padding-block-start: 120px;
-  padding-block-end: 60px;
+  padding-block-start: 10vw;
+  padding-block-end: 5vw;
 }
 
 .glyph {
@@ -71,7 +72,7 @@ header {
 
 h1,
 .newsletter-title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 10vw, 4rem);
   font-weight: 300;
   letter-spacing: -2px;
   background: linear-gradient(
@@ -86,15 +87,14 @@ h1,
 }
 
 .tagline {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 5vw, 1.5rem);
   color: var(--text-muted);
   font-weight: 300;
-  margin-block-end: var(--glyph-size);
   font-style: italic;
 }
 
 .description {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 5vw, 1.25rem);
   line-height: 1.8;
   color: var(--text-main);
   margin-block-end: 100px;
@@ -105,6 +105,7 @@ h1,
 
 .newsletter-signup {
   background: var(--gray-bg);
+  border: 1px solid var(--gray-border);
   padding-block: var(--glyph-size);
   padding-inline: 60px;
   margin-block: var(--glyph-size);
@@ -133,13 +134,13 @@ h1,
 }
 
 .signup-title {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 5vw, 2.5rem);
   margin-block-end: 20px;
   font-weight: 300;
 }
 
 .signup-description {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 5vw, 1.1rem);
   color: var(--text-muted);
   margin-block-end: 50px;
   max-inline-size: 500px;
@@ -157,7 +158,7 @@ h1,
   flex: 1;
   padding-block: 18px;
   padding-inline: 24px;
-  font-size: 1rem;
+  font-size: clamp(1rem, 5vw, 1rem);
   border: 2px solid var(--gray-border);
   border-inline-end: none;
   outline: none;
@@ -174,7 +175,7 @@ h1,
   background: var(--accent1);
   color: white;
   border: none;
-  font-size: 1rem;
+  font-size: clamp(1rem, 5vw, 1rem);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -211,14 +212,14 @@ h1,
 }
 
 .feature h3 {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 5vw, 1.3rem);
   margin-block-end: 15px;
   font-weight: 400;
 }
 
 .feature p {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: clamp(1rem, 5vw, 1rem);
   line-height: 1.6;
 }
 
@@ -251,7 +252,7 @@ footer {
 }
 
 .newsletter-header h2 {
-  font-size: 2rem;
+  font-size: clamp(1rem, 5vw, 2rem);
   margin-block-start: 2rem;
   font-weight: 300;
 }
@@ -271,7 +272,7 @@ footer {
 }
 
 .newsletter-title {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 5vw, 2.5rem);
   font-weight: 300;
   line-height: 1.2;
   margin-block-end: 30px;
@@ -279,7 +280,7 @@ footer {
 }
 
 .newsletter-intro {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 5vw, 1.2rem);
   line-height: 1.7;
   color: var(--text-muted);
   margin-block-end: 60px;
@@ -288,7 +289,7 @@ footer {
 
 .featured-tracks h2,
 .artist-spotlight h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 5vw, 1.8rem);
   margin-block-end: 40px;
   font-weight: 400;
   color: var(--accent1);
@@ -305,14 +306,14 @@ footer {
 }
 
 .track h3 {
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 5vw, 1.3rem);
   margin-block-end: 15px;
   font-weight: 400;
   color: var(--text-main);
 }
 
 .track p {
-  font-size: 1rem;
+  font-size: clamp(1rem, 5vw, 1rem);
   line-height: 1.6;
   color: var(--text-muted);
   margin-block-end: 20px;
@@ -362,7 +363,7 @@ footer {
 }
 
 .spotlight-header h2 {
-  font-size: 3rem;
+  font-size: clamp(1rem, 5vw, 3rem);
   font-weight: 300;
   color: var(--text-main);
   letter-spacing: -1px;
@@ -375,7 +376,7 @@ footer {
 }
 
 .spotlight-title {
-  font-size: 2.8rem;
+  font-size: clamp(1rem, 5vw, 2.8rem);
   font-weight: 300;
   line-height: 1.2;
   margin-block-end: 40px;
@@ -387,7 +388,7 @@ footer {
 }
 
 .spotlight-intro {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 5vw, 1.4rem);
   line-height: 1.7;
   color: var(--text-main);
   margin-block-end: 30px;
@@ -409,14 +410,14 @@ footer {
 }
 
 .archives-cta h2 {
-  font-size: 2.2rem;
+  font-size: clamp(1rem, 5vw, 2.2rem);
   font-weight: 300;
   margin-block-end: 20px;
   color: var(--text-main);
 }
 
 .archives-cta p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 5vw, 1.2rem);
   color: var(--text-muted);
   margin-block-end: 40px;
   max-inline-size: 500px;
@@ -430,7 +431,7 @@ footer {
   background: var(--accent3);
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 5vw, 1.1rem);
   font-weight: 500;
   transition: all 0.3s ease;
   font-family: inherit;
@@ -446,7 +447,7 @@ footer {
     padding-inline: 20px;
   }
 
-  h1 {
+  /* h1 {
     font-size: 2.5rem;
   }
 
@@ -456,7 +457,7 @@ footer {
 
   .description {
     font-size: 1.1rem;
-  }
+  } */
 
   .newsletter-signup {
     padding-block: 60px;
