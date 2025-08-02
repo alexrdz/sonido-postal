@@ -38,7 +38,7 @@ body {
     var(--accent1) 100%
   );
   background-size: 200% 100%;
-  animation: sarape 8s linear infinite alternate;
+  animation: sarape 2s linear infinite alternate;
 }
 
 @keyframes sarape {
