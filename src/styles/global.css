@@ -27,7 +27,7 @@ body {
 }
 
 .accent-bar {
-  block-size: 5px;
+  block-size: 0.3125rem;
   inline-size: 100%;
   background: linear-gradient(
     90deg,
@@ -53,7 +53,7 @@ body {
 
 .container {
   margin-inline: auto;
-  padding-inline: 40px;
+  padding-inline: 2.5rem;
 }
 
 header {
@@ -66,7 +66,7 @@ header {
   inline-size: var(--glyph-size);
   block-size: var(--glyph-size);
   margin-inline: auto;
-  margin-block-end: 40px;
+  margin-block-end: 2.5rem;
   opacity: 0.8;
 }
 
@@ -97,9 +97,9 @@ h1,
   font-size: clamp(1rem, 5vw, 1.25rem);
   line-height: 1.8;
   color: var(--text-main);
-  margin-block-end: 100px;
+  margin-block-end: 6.25rem;
   text-align: left;
-  max-inline-size: 600px;
+  max-inline-size: 37.5rem;
   margin-inline: auto;
 }
 
@@ -107,7 +107,7 @@ h1,
   background: var(--gray-bg);
   border: 1px solid var(--gray-border);
   padding-block: var(--glyph-size);
-  padding-inline: 60px;
+  padding-inline: 3.75rem;
   margin-block: var(--glyph-size);
   margin-inline: auto;
   max-inline-size: 50rem;
@@ -135,29 +135,29 @@ h1,
 
 .signup-title {
   font-size: clamp(1rem, 5vw, 2.5rem);
-  margin-block-end: 20px;
+  margin-block-end: 1.25rem;
   font-weight: 300;
 }
 
 .signup-description {
   font-size: clamp(1rem, 5vw, 1.1rem);
   color: var(--text-muted);
-  margin-block-end: 50px;
-  max-inline-size: 500px;
+  margin-block-end: 3.125rem;
+  max-inline-size: 31.25rem;
   margin-inline: auto;
 }
 
 .email-form {
   display: flex;
-  max-inline-size: 400px;
+  max-inline-size: 25rem;
   margin-inline: auto;
   gap: 0;
 }
 
 .email-input {
   flex: 1;
-  padding-block: 18px;
-  padding-inline: 24px;
+  padding-block: 1.125rem;
+  padding-inline: 1.5rem;
   font-size: clamp(1rem, 5vw, 1rem);
   border: 2px solid var(--gray-border);
   border-inline-end: none;
@@ -170,8 +170,8 @@ h1,
 }
 
 .subscribe-btn {
-  padding-block: 20px;
-  padding-inline: 32px;
+  padding-block: 1.25rem;
+  padding-inline: 2rem;
   background: var(--accent1);
   color: white;
   border: none;
@@ -188,7 +188,7 @@ h1,
 }
 
 .features {
-  padding-block: 100px;
+  padding-block: 6.25rem;
   text-align: center;
 }
 
@@ -207,7 +207,7 @@ h1,
   inline-size: var(--glyph-size);
   block-size: var(--glyph-size);
   margin-inline: auto;
-  margin-block-end: 30px;
+  margin-block-end: 1.875rem;
   opacity: 0.7;
 }
 
@@ -269,6 +269,14 @@ footer {
   max-inline-size: 700px;
   margin-inline: auto;
   padding-inline: 40px;
+
+  > p {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-block-end: 60px;
+    font-style: italic;
+  }
 }
 
 .newsletter-title {
@@ -279,15 +287,7 @@ footer {
   text-align: center;
 }
 
-.newsletter-intro {
-  font-size: clamp(1rem, 5vw, 1.2rem);
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin-block-end: 60px;
-  font-style: italic;
-}
-
-.featured-tracks h2,
+.featured-tracks h3,
 .artist-spotlight h2 {
   font-size: clamp(1rem, 5vw, 1.8rem);
   margin-block-end: 40px;
@@ -296,9 +296,12 @@ footer {
 }
 
 .track {
-  margin-block-end: 50px;
-  padding-block-end: 30px;
+  margin-block-end: 3.125rem;
+  padding-block-end: 3.125rem;
   border-block-end: 1px solid var(--gray-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .track:last-child {
@@ -307,7 +310,7 @@ footer {
 
 .track h3 {
   font-size: clamp(1rem, 5vw, 1.3rem);
-  margin-block-end: 15px;
+  margin-block-end: 0.9375rem;
   font-weight: 400;
   color: var(--text-main);
 }
@@ -316,17 +319,17 @@ footer {
   font-size: clamp(1rem, 5vw, 1rem);
   line-height: 1.6;
   color: var(--text-muted);
-  margin-block-end: 20px;
+  margin-block-end: 1.25rem;
 }
 
 .track iframe {
-  margin-block-start: 15px;
-  border-radius: 4px;
+  margin-block-start: 0.9375rem;
+  border-radius: 0.25rem;
 }
 
 .artist-spotlight {
   background: white;
-  padding-block: 120px;
+  padding-block: 7.5rem;
   text-align: center;
   position: relative;
 }
@@ -350,14 +353,13 @@ footer {
 
 .spotlight-header {
   text-align: center;
-  margin-block-end: var();
 }
 
 .spotlight-glyph {
-  inline-size: 100px;
-  block-size: 100px;
+  inline-size: 6.25rem;
+  block-size: 6.25rem;
   margin-inline: auto;
-  margin-block-end: 40px;
+  margin-block-end: 2.5rem;
   opacity: 0.8;
   fill: var(--accent1);
 }
@@ -379,7 +381,7 @@ footer {
   font-size: clamp(1rem, 5vw, 2.8rem);
   font-weight: 300;
   line-height: 1.2;
-  margin-block-end: 40px;
+  margin-block-end: 2.5rem;
   background: linear-gradient(45deg, var(--accent1), var(--accent5));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -391,43 +393,43 @@ footer {
   font-size: clamp(1rem, 5vw, 1.4rem);
   line-height: 1.7;
   color: var(--text-main);
-  margin-block-end: 30px;
+  margin-block-end: 1.875rem;
   font-weight: 400;
 }
 
 .archives-cta {
   background: var(--gray-bg);
-  padding-block: 100px;
+  padding-block: 6.25rem;
   text-align: center;
 }
 
 .archives-glyph {
-  inline-size: 60px;
-  block-size: 60px;
+  inline-size: 3.75rem;
+  block-size: 3.75rem;
   margin-inline: auto;
-  margin-block-end: 30px;
+  margin-block-end: 1.875rem;
   opacity: 0.7;
 }
 
 .archives-cta h2 {
   font-size: clamp(1rem, 5vw, 2.2rem);
   font-weight: 300;
-  margin-block-end: 20px;
+  margin-block-end: 1.25rem;
   color: var(--text-main);
 }
 
 .archives-cta p {
   font-size: clamp(1rem, 5vw, 1.2rem);
   color: var(--text-muted);
-  margin-block-end: 40px;
-  max-inline-size: 500px;
+  margin-block-end: 2.5rem;
+  max-inline-size: 31.25rem;
   margin-inline: auto;
 }
 
 .archives-btn {
   display: inline-block;
-  padding-block: 18px;
-  padding-inline: 36px;
+  padding-block: 1.125rem;
+  padding-inline: 2.25rem;
   background: var(--accent3);
   color: white;
   text-decoration: none;
@@ -444,30 +446,18 @@ footer {
 
 @media (max-width: 768px) {
   .container {
-    padding-inline: 20px;
+    padding-inline: 1.25rem;
   }
-
-  /* h1 {
-    font-size: 2.5rem;
-  }
-
-  .tagline {
-    font-size: 1.2rem;
-  }
-
-  .description {
-    font-size: 1.1rem;
-  } */
 
   .newsletter-signup {
-    padding-block: 60px;
-    padding-inline: 30px;
-    margin-block: 60px;
+    padding-block: 3.75rem;
+    padding-inline: 1.875rem;
+    margin-block: 3.75rem;
   }
 
   .email-form {
     flex-direction: column;
-    max-inline-size: 300px;
+    max-inline-size: 18.75rem;
   }
 
   .email-input {
@@ -476,11 +466,11 @@ footer {
   }
 
   .features-grid {
-    gap: 60px;
+    gap: 3.75rem;
   }
 
   .newsletter-content {
-    padding-inline: 20px;
+    padding-inline: 1.25rem;
   }
 
   .newsletter-title {
@@ -489,6 +479,9 @@ footer {
 
   .newsletter-intro {
     font-size: 1.1rem;
+
+    p {
+    }
   }
 
   .spotlight-content h1 {

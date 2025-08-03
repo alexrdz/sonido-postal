@@ -1,6 +1,33 @@
 ---
 import SectionGlyph from "./SectionGlyph.astro";
 import BandcampPlayer from "./BandcampPlayer.astro";
+
+import { getCollection, getEntry, render } from "astro:content";
+import TrackList from "./TrackList.astro";
+import Track from "./Track.astro";
+
+const allPosts = await getCollection("blog");
+
+// Sort by date and pick the latest
+const latestMeta = allPosts.sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+)[0];
+
+if (!latestMeta) {
+  throw new Error("No blog posts found.");
+}
+
+// Use `getEntry()` to load full entry (which supports render)
+const fullEntry = await getEntry("blog", latestMeta.id);
+
+if (!fullEntry) {
+  throw new Error("Latest entry could not be loaded.");
+}
+
+const rendered = await render(fullEntry);
+const { Content } = rendered;
+const { title } = fullEntry.data;
 ---
 
 <section class="latest-newsletter">
@@ -10,18 +37,18 @@ import BandcampPlayer from "./BandcampPlayer.astro";
   </div>
   <article class="newsletter-content">
     <h3 class="newsletter-title">
-      Cumbia in Technicolor: Psychedelic Grooves to Ignite Your Weekend
+      {title}
     </h3>
-    <p class="newsletter-intro">
-      Let the weekend bloom in swirling color as we dive into the hypnotic world
-      of psychedelic cumbia. This isn't your abuela's dance floor—these are
-      cosmic rhythms, electric guitars, and swirling synths that stretch
-      tradition into new dimensions. Join us as we celebrate Latinx artists who
-      blend ancestral beats with mind-bending sounds, inviting you to lose
-      yourself in the kaleidoscope and start your weekend on a wave of pure,
-      vibrant energy.
-    </p>
-    <section class="featured-tracks">
+
+    <Content
+      components={{
+        TrackList,
+        Track,
+        BandcampPlayer,
+      }}
+    />
+
+    <!-- <section class="featured-tracks">
       <h3>Featured Tracks</h3>
       <div class="track">
         <h4>1. Close To Me - Locobeach</h4>
@@ -72,6 +99,6 @@ import BandcampPlayer from "./BandcampPlayer.astro";
         </p>
         <BandcampPlayer trackId="1333714626" />
       </div>
-    </section>
+    </section> -->
   </article>
 </section>
