@@ -1,0 +1,11 @@
+---
+import BandcampPlayer from "./BandcampPlayer.astro";
+
+const { number, title, artist, albumId, trackId } = Astro.props;
+---
+
+<div class="track">
+  <h4>{number}. {title} - {artist}</h4>
+  <p><slot /></p>
+  <BandcampPlayer albumId={albumId} trackId={trackId} />
+</div>
